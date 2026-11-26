@@ -24,7 +24,7 @@ jobs:
       - run: pip install -r docs/requirements.txt
       - run: mkdocs build --strict -f docs/mkdocs.user.yml
       - run: mkdocs build --strict -f docs/mkdocs.technical.yml
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: docs-site
           path: site/
