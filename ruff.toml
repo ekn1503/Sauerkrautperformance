@@ -1,0 +1,9 @@
+# Python lint + format for the whole monorepo (per-project pyproject.toml may extend this).
+line-length = 100
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC", "SIM", "PT"]
+
+[lint.per-file-ignores]
+"**/tests/**" = ["B011"]

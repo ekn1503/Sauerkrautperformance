@@ -1,0 +1,10 @@
+FROM python:3.12-slim AS build
+WORKDIR /src
+COPY docs/requirements.txt docs/requirements.txt
+RUN pip install --no-cache-dir -r docs/requirements.txt
+COPY docs docs
+RUN mkdocs build --strict -f docs/mkdocs.user.yml
+
+FROM nginx:1.27-alpine
+COPY --from=build /src/site/user /usr/share/nginx/html
+EXPOSE 80

@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly }
+  # Add one entry per project when it is created, e.g.:
+  # - package-ecosystem: pip        # or uv
+  #   directory: /apps/<project>/backend
+  # - package-ecosystem: npm
+  #   directory: /apps/<project>/frontend
+  # - package-ecosystem: docker
+  #   directory: /apps/<project>/deploy

@@ -1,0 +1,42 @@
+site_name: Sauerkrautperformance - Technical Documentation
+docs_dir: technical
+site_dir: ../site/technical
+strict: true
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - search.highlight
+nav:
+  - Home: index.md
+  - Dynamometer test bench:
+      - dyno-bench/index.md
+      - Vision and goals: dyno-bench/vision/index.md
+      - Architecture:
+          - dyno-bench/architecture/index.md
+          - arc42:
+              - dyno-bench/architecture/arc42/01-introduction-and-goals.md
+              - dyno-bench/architecture/arc42/02-constraints.md
+              - dyno-bench/architecture/arc42/03-context-and-scope.md
+              - dyno-bench/architecture/arc42/04-solution-strategy.md
+              - dyno-bench/architecture/arc42/05-building-block-view.md
+              - dyno-bench/architecture/arc42/06-runtime-view.md
+              - dyno-bench/architecture/arc42/07-deployment-view.md
+              - dyno-bench/architecture/arc42/08-cross-cutting-concepts.md
+              - dyno-bench/architecture/arc42/09-architecture-decisions.md
+              - dyno-bench/architecture/arc42/10-quality-requirements.md
+              - dyno-bench/architecture/arc42/11-risks-and-technical-debt.md
+              - dyno-bench/architecture/arc42/12-glossary.md
+          - ADRs:
+              - dyno-bench/architecture/adr/index.md
+              - dyno-bench/architecture/adr/0000-template.md
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
